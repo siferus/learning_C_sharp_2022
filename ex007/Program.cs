@@ -1,25 +1,10 @@
-﻿namespace Apps 
-{ 
-    internal class Program 
-    { 
-        static void Main(string[] args) 
-        { 
-            Console.Write(" Нужно узнать, является ли этот день выходным или нет?  "); 
-         
-                Console.Write("\n Введите номер дня недели  "); 
-                int num = int.Parse(Console.ReadLine()); 
-                if (num >= 1 && num <= 5) 
-                { 
-                    Console.Write(" Нет, это не выходной"); 
-                } 
- 
-                else if (num >= 6 && num <= 7) 
-                { 
-                    Console.Write(" Да, это выходной"); 
-                } 
-                else Console.Write(" Не существует такого дня недели"); 
-            
-        } 
-    } 
-}
+﻿Console.WriteLine("Введите число от 1 до 7:");
+            int num = Convert.ToInt32(Console.ReadLine());
 
+            if (num >= 1 && num <= 7)
+            {
+                if (num == 6 | num == 7) Console.WriteLine("Сегодня выходной");
+                else Console.WriteLine("Сегодня рабочий день");
+            }
+            else Console.WriteLine("Не верное число");
+            
